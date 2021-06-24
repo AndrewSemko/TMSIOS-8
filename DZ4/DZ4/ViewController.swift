@@ -102,13 +102,13 @@ class ViewController: UIViewController {
         
 //        # TASK 2
 
-        let a = 22
+        let a = 22.5
         let b = 11
         let c = 33
 
-        func summaValue(a: Int, b: Int, c: Int) {
+        func summaValue(a: Double, b: Int, c: Int) {
 
-            let sum = (a + b + c) / 3
+            let sum = (Int(a) + b + c) / 3
 
             print("summa \(sum)")
 
@@ -130,32 +130,25 @@ class ViewController: UIViewController {
         
 //        m = (n * p * (1 + p)*y) / (12 * ((1 + p) * y) - 1)
 
-        
-        
-  
-        let n = 1000000
-        let y = 10
-        let p = 0.12
-        
-        
+
         func calculationCredit(suumm: (n: Int, y: Int, p: Double)) {
-            
-            let i = pow(1 + Double(p),2)
-            
-            _ = Int(p)
-            
-            let a = Double(n)
-            
-            let m = Int(Double(a) * p * i) / (12 * Int((i)) - 1)
-            
+
+            let i = pow(1 + p, Double(y))
+
+            let m = Int(Double(n) * p * i) / (12 * Int(i) - 1)
+
             let s = (m * 12) * y
-        
+
             print("месячные выплаты = \(m)")
             print("суммарная выплата за все месяца каждого года = \(s)")
-            
+
         }
-      
-        calculationCredit(suumm: (n: 10000000, y: 10, p: 0.12))
+
+              let n = 1000000
+              let y = 10
+              let p = 0.14
+
+        calculationCredit(suumm: (n: 10000000, y: 10, p: 0.14))
         
      
             
