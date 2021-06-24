@@ -74,31 +74,29 @@ class ViewController: UIViewController {
         
 //        # TASK 1
   
-        let worker1: (name: String, age: Int, sallary: Float) = ("Andrey", 22, 58.9)
-        let worker2: (name: String, age: Int, sallary: Float) = ("Alex", 47, 77.7)
-        let worker3: (name: String, age: Int, sallary: Float) = ("Gena", 33, 46.8)
         
-        func printInfoWorker (worker: (name: String, age: Int, sallary: Float)) {
+        var worker1: (name: String, age: Int, sallary: Float) = ("Andrey", 22, 100)
+        var worker2: (name: String, age: Int, sallary: Float) = ("Alex", 47, 100)
+        var worker3: (name: String, age: Int, sallary: Float) = ("Gena", 33, 100)
+        
+        func printInfoWorker (worker: inout (name: String, age: Int, sallary: Float))  {
             
-            _ = worker
-            
-            let age = Int.random(in: 0...100)
-                switch age {
-                case 41...100:
-                    print("зарплата увелиться в 3 раза")
-                case 31...40:
-                    print("зарплата увелиться в 2 раза")
+            switch worker.age {
                 case 18...30:
-                    print("зарплата увелиться в 1.5 раза)
+                    worker.sallary *= 1.5
+                    print("зарплата увелиться в 1.5 раз ")
+                case 31...40:
+                    worker.sallary *= Float(Int(2))
+                    print("зарплата увелиться в 2 раз")
                 default:
-                break
-                
+                    worker.sallary *= Float(Int(3))
+                    print("зарплата увелиться в 3 раз")
                 }
+            print("\(worker.sallary)")
         }
-        
-        printInfoWorker(worker: worker1)
-        printInfoWorker(worker: worker2)
-        printInfoWorker(worker: worker3)
+        printInfoWorker(worker: &worker1)
+        printInfoWorker(worker: &worker2)
+        printInfoWorker(worker: &worker3)
         
 //        # TASK 2
 
