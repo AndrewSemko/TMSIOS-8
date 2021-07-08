@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DZ8_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-ge-WQ8">
+                                <rect key="frame" x="100" y="74" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uje-18-6AV">
+                                <rect key="frame" x="100" y="204" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYH-rd-p6z">
+                                <rect key="frame" x="100" y="138" width="190" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkJ-pX-Xlc">
+                                <rect key="frame" x="100" y="268" width="190" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="equilsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihR-yE-q1e"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9u-xA-isN">
+                                <rect key="frame" x="150" y="395" width="90" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H9u-xA-isN" secondAttribute="height" multiplier="2:1" id="wBF-Or-vJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.74151434865938559" green="0.95594714936755953" blue="0.91118751577779544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EYH-rd-p6z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="36D-N4-1dD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AkJ-pX-Xlc" secondAttribute="trailing" constant="100" id="5QV-T5-QRn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NhW-ge-WQ8" secondAttribute="trailing" constant="100" id="6Ju-6P-6ie"/>
+                            <constraint firstItem="AkJ-pX-Xlc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="6N7-1s-rMe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H9u-xA-isN" secondAttribute="bottom" constant="370" id="AQR-Re-lcG"/>
+                            <constraint firstItem="NhW-ge-WQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="C0Y-Uf-b7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9u-xA-isN" secondAttribute="trailing" constant="150" id="Ncg-Qa-3Rh"/>
+                            <constraint firstItem="H9u-xA-isN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="U6R-38-f3r"/>
+                            <constraint firstItem="uje-18-6AV" firstAttribute="top" secondItem="EYH-rd-p6z" secondAttribute="bottom" constant="30" id="kW2-i8-yLl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uje-18-6AV" secondAttribute="trailing" constant="100" id="oTp-jv-03K"/>
+                            <constraint firstItem="AkJ-pX-Xlc" firstAttribute="top" secondItem="uje-18-6AV" secondAttribute="bottom" constant="30" id="sFA-A3-c90"/>
+                            <constraint firstItem="uje-18-6AV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="tBd-dm-VN2"/>
+                            <constraint firstItem="NhW-ge-WQ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="wbk-JN-lys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EYH-rd-p6z" secondAttribute="trailing" constant="100" id="yT6-7W-lfj"/>
+                            <constraint firstItem="EYH-rd-p6z" firstAttribute="top" secondItem="NhW-ge-WQ8" secondAttribute="bottom" constant="30" id="zoK-X7-Qn2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="equilButton" destination="AkJ-pX-Xlc" id="qq3-9K-jr6"/>
+                        <outlet property="plucLabel" destination="EYH-rd-p6z" id="qdM-X3-LVS"/>
+                        <outlet property="qualyLabel" destination="H9u-xA-isN" id="8m5-Yt-YVL"/>
+                        <outlet property="textField" destination="NhW-ge-WQ8" id="3k1-Qs-0fv"/>
+                        <outlet property="textField2" destination="uje-18-6AV" id="dw6-Vb-4aL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.46153846153846" y="54.739336492890992"/>
+        </scene>
+    </scenes>
+</document>
